@@ -61,19 +61,22 @@ jobs:
         
     #Solutions
     #Troubleshooting Java Error
-    - run: |
-        echo "java version"
-        java -version
     
+    #Part I - Troubleshooting Java Error
+    #- run: |
+    #    echo "java version"
+    #    java -version
+    
+    #Part II - Resolving Error
     - run: |
-           uses: actions/setup-java@v3
-              with:
-                java-version: 16
-                distribution: 'microsoft'
+        uses: actions/setup-java@v3
+        with:
+            java-version: 16
+            distribution: 'microsoft'
               
     
     - name: Autobuild
-    - if: matrix.language == 'java'
+    #- if: matrix.language == 'java'
       uses: github/codeql-action/autobuild@v2
     
     
