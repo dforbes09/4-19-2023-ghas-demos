@@ -32,7 +32,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'go', 'java', 'javascript', 'python' ]
+        language: [ 'go', 'javascript', 'python' ] 
+        #removed Java
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Use only 'java' to analyze code written in Java, Kotlin or both
         # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
@@ -68,11 +69,11 @@ jobs:
     #    java -version
     
     #Part II - Resolving Error
-    - run: |
-        uses: actions/setup-java@v3
-        with:
-            java-version: 16
-            distribution: 'microsoft'
+    #- run: |
+    #    uses: actions/setup-java@v3
+    #    with:
+    #        java-version: 16
+    #        distribution: 'microsoft'
               
     
     - name: Autobuild
